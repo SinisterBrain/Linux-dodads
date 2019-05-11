@@ -8,3 +8,6 @@
  
 #Upgrade AUR programs
  pacaur -Su -a
+
+#dd command to zero out drive/thumbdrive/sdcard
+ dd if=/dev/zero of=/dev/sdd status=progress
