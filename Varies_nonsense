@@ -1,0 +1,10 @@
+#Manjaro/Arch
+
+#remove orphans
+ sudo pacman -Rns $(pacman -Qtdq)
+ 
+#Check for packages that were installed as a dependency but now, no other packages depend on them
+ pacman -Qtd
+ 
+#Upgrade AUR programs
+ pacaur -Su -a
