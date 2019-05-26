@@ -1,16 +1,19 @@
-#Manjaro/Arch
+# Manjaro/Arch
 
-#remove orphans
+# Remove orphans
  sudo pacman -Rns $(pacman -Qtdq)
  
-#Check for packages that were installed as a dependency but now, no other packages depend on them
+# Check for packages that were installed as a dependency but now, no other packages depend on them
  pacman -Qtd
  
-#Upgrade AUR programs
+# Upgrade AUR programs
  pacaur -Su -a
 
-#dd command to zero out drive/thumbdrive/sdcard
+# dd command to zero out drive/thumbdrive/sdcard
  dd if=/dev/zero of=/dev/sdd status=progress
+ 
+# update grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
  
 #Use pacman-mirrors to Set the Fastest Download Server
 https://wiki.manjaro.org/index.php?title=Use_pacman-mirrors_to_Set_the_Fastest_Download_Servergithub
