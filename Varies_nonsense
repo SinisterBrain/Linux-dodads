@@ -15,5 +15,8 @@
 # update grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
  
-#Use pacman-mirrors to Set the Fastest Download Server
+# Use pacman-mirrors to Set the Fastest Download Server
 https://wiki.manjaro.org/index.php?title=Use_pacman-mirrors_to_Set_the_Fastest_Download_Servergithub
+
+# AngrySearch cron job (crontab -e)
+0 */3 * * * /usr/share/angrysearch/angrysearch_update_database.py
