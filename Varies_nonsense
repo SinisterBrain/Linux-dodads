@@ -7,16 +7,11 @@
  pacman -Qtd
  
 # Upgrade AUR programs
- pacaur -Su -a
-
-# dd command to zero out drive/thumbdrive/sdcard
- dd if=/dev/zero of=/dev/sdd status=progress
- 
-# update grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+ pamac upgrade -a
+ yay -Syu
  
 # Use pacman-mirrors to Set the Fastest Download Server
-https://wiki.manjaro.org/index.php?title=Use_pacman-mirrors_to_Set_the_Fastest_Download_Servergithub
+sudo pacman-mirrors -f5 && sudo pacman -Syyu
 
 # AngrySearch cron job (crontab -e)
 0 */3 * * * /usr/share/angrysearch/angrysearch_update_database.py
